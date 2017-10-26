@@ -41,6 +41,9 @@ public class CameraMouseMovement : MonoBehaviour {
 
 		float x = initial_position.x + (movement_ammount * percent_x);
 		float y = initial_position.y + (movement_ammount * percent_y);
+
+		// Set the camera's position to the newly calculated values
+
 		transform.position = new Vector3(
 			x, 
 			y, 
