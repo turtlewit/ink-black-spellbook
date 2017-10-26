@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuButton : MonoBehaviour {
 	
-	public AudioSource audio;
+	public AudioSource aud;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +16,6 @@ public class MainMenuButton : MonoBehaviour {
 	}
 
 	public void MouseOver(){
-		audio.Play();
+		aud.Play();
 	}
 }
