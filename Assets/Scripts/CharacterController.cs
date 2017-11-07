@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour {
 
     //stats
-    public int current_health;
-    public int max_health;
+//    public int current_health;
+  //  public int max_health;
 
 
 
@@ -24,7 +24,7 @@ public class CharacterController : MonoBehaviour {
     float MoveVelocity;
     // Use this for initialization
     void Start () {
-        current_health = max_health;
+        //current_health = max_health;
 		
 	}
 	
@@ -40,10 +40,12 @@ public class CharacterController : MonoBehaviour {
     //Check to see if grounded or not
     void OnTriggerEnter2D()
     {
+        Debug.Log("Enter");
         grounded = true;
     }
     void OnTriggerExit2D()
     {
+        Debug.Log("Exit");
         grounded = false;
     }
 
@@ -71,6 +73,8 @@ public class CharacterController : MonoBehaviour {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
             }
         }
+
+        //move
         MoveVelocity = 0;
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -83,11 +87,27 @@ public class CharacterController : MonoBehaviour {
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
-        //move direction
-        //float move = Input.GetAxis("Horizontal");
+        //attack
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
 
-        //create vector in direction of move with speed of Max_Speed
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(move * Max_Speed, GetComponent<Rigidbody2D>().velocity.y);
+            Collider2D[] hitobjects = Physics2D.OverlapCircleAll(transform.position, 1.0f);
+            Debug.Log("length: " + hitobjects.Length);
+            if (hitobjects.Length >= 5)
+            {
+                for (int i = 0; i <= hitobjects.Length-1; i++)
+                {
+                    if (hitobjects[i].gameObject.tag == "enemy")
+                    {
+                        //Debug.Log("hit: " + hitobjects[i]);
+                        hitobjects[i].SendMessage("damage", 10.0f, SendMessageOptions.DontRequireReceiver);
+                    }
+                 
+                }
+            }
+        }
+
+
 
         //flipping
         if (MoveVelocity > 0 && !facingright)
