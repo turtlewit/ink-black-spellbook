@@ -122,11 +122,9 @@ GameObject:
   - component: {fileID: 30961196}
   - component: {fileID: 30961195}
   - component: {fileID: 30961194}
-  - component: {fileID: 30961199}
   - component: {fileID: 30961200}
   - component: {fileID: 30961197}
   - component: {fileID: 30961198}
-  - component: {fileID: 30961201}
   - component: {fileID: 30961202}
   - component: {fileID: 30961203}
   m_Layer: 0
@@ -244,17 +242,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.51}
   m_Size: {x: 1.08, y: 0.31}
   m_Direction: 1
---- !u!114 &30961199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30961193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da7a2e620a232234a88dd7b0a3d90903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &30961200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,17 +267,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.03, y: 0.92}
   m_EdgeRadius: 0
---- !u!114 &30961201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 30961193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae86758fec9e9f54d9f76c70bd14af7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &30961202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,10 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed0a324a2e1fae408bb428ffcb52744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_health: 0
-  max_health: 0
   Max_Speed: 10
-  jump: 5
+  jump: 12
 --- !u!95 &30961203
 Animator:
   serializedVersion: 3
@@ -453,7 +427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 495391093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 3.91, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
