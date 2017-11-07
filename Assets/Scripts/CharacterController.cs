@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour {
+public class CharacterController : MonoBehaviour
+{
 
     //stats
-//    public int current_health;
-  //  public int max_health;
+    //    public int current_health;
+    //  public int max_health;
 
 
 
@@ -23,13 +24,15 @@ public class CharacterController : MonoBehaviour {
 
     float MoveVelocity;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //current_health = max_health;
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         HandleInput();
 
@@ -40,12 +43,10 @@ public class CharacterController : MonoBehaviour {
     //Check to see if grounded or not
     void OnTriggerEnter2D()
     {
-        Debug.Log("Enter");
         grounded = true;
     }
     void OnTriggerExit2D()
     {
-        Debug.Log("Exit");
         grounded = false;
     }
 
@@ -74,35 +75,43 @@ public class CharacterController : MonoBehaviour {
             }
         }
 
+
+
+
+
         //move
         MoveVelocity = 0;
+       
+       
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                MoveVelocity = -Max_Speed;
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                MoveVelocity = Max_Speed;
+            }
+            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+        
 
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            MoveVelocity = -Max_Speed;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            MoveVelocity = Max_Speed;
-        }
-        GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+
+
+
 
         //attack
         if (Input.GetKeyDown(KeyCode.Z))
         {
 
             Collider2D[] hitobjects = Physics2D.OverlapCircleAll(transform.position, 1.0f);
-            Debug.Log("length: " + hitobjects.Length);
             if (hitobjects.Length >= 5)
             {
-                for (int i = 0; i <= hitobjects.Length-1; i++)
+                for (int i = 0; i <= hitobjects.Length - 1; i++)
                 {
                     if (hitobjects[i].gameObject.tag == "enemy")
                     {
-                        //Debug.Log("hit: " + hitobjects[i]);
                         hitobjects[i].SendMessage("damage", 10.0f, SendMessageOptions.DontRequireReceiver);
                     }
-                 
+
                 }
             }
         }
@@ -116,11 +125,7 @@ public class CharacterController : MonoBehaviour {
             Flip();
 
     }
-
-    private void Handleattack()
-    {
-
-    }
+}
 
 
-    }
+
