@@ -44,10 +44,12 @@ public class CharacterController : MonoBehaviour
     //Check to see if grounded or not
     void OnTriggerEnter2D()
     {
+        Debug.Log("touching ground");
         grounded = true;
     }
     void OnTriggerExit2D()
     {
+        Debug.Log("not touching ground");
         grounded = false;
     }
 
@@ -67,7 +69,9 @@ public class CharacterController : MonoBehaviour
     private void HandleInput()
     {
         //jumping
+
         if (Input.GetKeyDown(KeyCode.W))
+
         {
 
             if (grounded)
