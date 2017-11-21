@@ -5,18 +5,15 @@ using UnityEngine;
 public class projectile_origin : MonoBehaviour {
 
 	public GameObject projectile; //projectile prefab
+	public float fire_rate;
 	private string PLAYER_GO_NAME;
 
 	// Use this for initialization
 	void Start () {
-		Invoke("FireProjectile", 1f);
+		InvokeRepeating("FireProjectile", 1f, fire_rate);
 		PLAYER_GO_NAME = "character";
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		//FireProjectile(); bc it fires waaaaay too many times
-	}
 	
 	//function to fire a projectile
 	void FireProjectile() {
