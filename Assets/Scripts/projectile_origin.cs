@@ -15,7 +15,7 @@ public class projectile_origin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//FireProjectile(); bc it fires waaaaay too many times
+		//FireProjectile();// bc it fires waaaaay too many times
 	}
 	
 	//function to fire a projectile
