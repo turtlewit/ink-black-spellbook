@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Contact Enemy
   - enemy
+  - floor
   layers:
   - Default
   - TransparentFX
