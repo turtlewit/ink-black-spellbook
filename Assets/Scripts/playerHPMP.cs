@@ -15,6 +15,8 @@ public class playerHPMP : MonoBehaviour {
     static KeyCode teleportButton = KeyCode.X;
     static KeyCode rechargeButton = KeyCode.C;
 
+    public GameObject teleportTester;
+
     // Use this for initialization
     void Start () {
         //HP_display = GetComponent<Text>();
@@ -42,13 +44,36 @@ public class playerHPMP : MonoBehaviour {
         //if no direction is held, spell will not be cast.
         if (currentInk >= 10 && Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(5, 0, 0);
-            currentInk -= 10;
+            Vector3 current_pos = transform.position;
+            current_pos.x += 5;
+            teleportTester.transform.position = current_pos; //moves the tele tester to the potential teleport spot
+            if (teleportTester.GetComponent<teleTester>().isInsideWall) //checks whether the tester collides with a wall
+            {
+                print("cannot teleport to right, as there is a wall");
+                return; //abort, as we cannot teleport into a wall
+            }
+            else
+            {
+                transform.Translate(5, 0, 0);
+                currentInk -= 10;
+            }
+            
         }
         else if (currentInk >= 10 && Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-5, 0, 0);
-            currentInk -= 10;
+            Vector3 current_pos = transform.position;
+            current_pos.x -= 5;
+            teleportTester.transform.position = current_pos; //moves the tele tester to the potential teleport spot
+            if (teleportTester.GetComponent<teleTester>().isInsideWall) //checks whether the tester collides with a wall
+            {
+                print("cannot teleport to left, as there is a wall");
+                return; //abort, as we cannot teleport into a wall
+            }
+            else
+            {
+                transform.Translate(-5, 0, 0);
+                currentInk -= 10;
+            }
         }
         
     }
@@ -58,6 +83,11 @@ public class playerHPMP : MonoBehaviour {
         //fully recharges ink. used for testing purposes
         currentHealth = 80;
         currentInk = 100;
+    }
+
+    public void takeDamage(int dmg)
+    {
+        currentHealth -= dmg;
     }
 
     // Update is called once per frame
