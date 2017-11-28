@@ -6,7 +6,9 @@ public class projectile_origin : MonoBehaviour {
 
 	public GameObject projectile; //projectile prefab
 	public float fire_rate;
+	public float projectile_life;
 	private string PLAYER_GO_NAME;
+	private GameObject project;
 
 	// Use this for initialization
 	void Start () {
@@ -26,13 +28,18 @@ public class projectile_origin : MonoBehaviour {
 		GameObject character = GameObject.Find(PLAYER_GO_NAME);
 		if (character != null) { //if the player isn't dead
 			//instantiate projectile
-			GameObject project = (GameObject)Instantiate(projectile);
+			project = (GameObject)Instantiate(projectile);
 			//initial position
 			project.transform.position = transform.position;
 			//compute direction towards player
 			Vector2 direction = character.transform.position - project.transform.position;
 			//set projectile direction
 			project.GetComponent<projectile_movement>().SetDirection(direction);
+			//set code to destroy projectile after it travels projectile_life seconds
+			Destroy(project, projectile_life);
 		}
 	}
+	
+	
+	
 }
