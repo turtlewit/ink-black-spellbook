@@ -12,10 +12,11 @@ public class CharacterController : MonoBehaviour
 
 
     //speed
-    public float Max_Speed = 10f;
+    public float Max_Speed = 7f;
 
     //jump
-    public float jump = 5f;
+    public float jump = 8f;
+	public float High_Jump = 12f;
 
     bool grounded = false;
 
@@ -43,10 +44,12 @@ public class CharacterController : MonoBehaviour
     //Check to see if grounded or not
     void OnTriggerEnter2D()
     {
+        Debug.Log("touching ground");
         grounded = true;
     }
     void OnTriggerExit2D()
     {
+        Debug.Log("not touching ground");
         grounded = false;
     }
 
@@ -66,7 +69,9 @@ public class CharacterController : MonoBehaviour
     private void HandleInput()
     {
         //jumping
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+
+        if (Input.GetKeyDown(KeyCode.W))
+
         {
 
             if (grounded)
@@ -75,7 +80,13 @@ public class CharacterController : MonoBehaviour
             }
         }
 
-
+		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.W))
+		{
+			if (grounded)
+			{
+				GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, High_Jump);
+			}
+		}
 
 
 
@@ -83,11 +94,11 @@ public class CharacterController : MonoBehaviour
         MoveVelocity = 0;
        
        
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 MoveVelocity = -Max_Speed;
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.D))
             {
                 MoveVelocity = Max_Speed;
             }
@@ -115,6 +126,24 @@ public class CharacterController : MonoBehaviour
                 }
             }
         }
+
+
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			//subtract mana
+			Collider2D[] hitobjects = Physics2D.OverlapCircleAll(transform.position, 3.0f);
+			if (hitobjects.Length >= 5)
+			{
+				for (int i = 0; i <= hitobjects.Length - 1; i++)
+				{
+					if (hitobjects[i].gameObject.tag == "enemy")
+					{
+						hitobjects[i].SendMessage("lightning", 15.0f, SendMessageOptions.DontRequireReceiver);
+					}
+
+				}
+			}
+		}
 
 
 

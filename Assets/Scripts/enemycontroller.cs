@@ -50,4 +50,12 @@ public class enemycontroller : MonoBehaviour {
         if (max_health <= 0.0)
             Destroy(gameObject);
     }
+
+	void lightning(float amount)
+	{
+
+		max_health -= amount;
+		if (max_health <= 0.0)
+			Destroy(gameObject);
+	}
 }
