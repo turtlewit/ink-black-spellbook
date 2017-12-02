@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - character
   - wall
+  - waypoint
   layers:
   - Default
   - TransparentFX
