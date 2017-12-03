@@ -201,6 +201,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114080599377299528, guid: 34e32f9060f2d0447ac1cdccffb54048,
+        type: 2}
+      propertyPath: teleportTester
+      value: 
+      objectReference: {fileID: 2000343158}
+    - target: {fileID: 224049584408870272, guid: 34e32f9060f2d0447ac1cdccffb54048,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -42.49121
+      objectReference: {fileID: 0}
+    - target: {fileID: 224049584408870272, guid: 34e32f9060f2d0447ac1cdccffb54048,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 224679313558791564, guid: 34e32f9060f2d0447ac1cdccffb54048,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -42.49121
+      objectReference: {fileID: 0}
+    - target: {fileID: 224679313558791564, guid: 34e32f9060f2d0447ac1cdccffb54048,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 434.5
+      objectReference: {fileID: 0}
     - target: {fileID: 224340560330326244, guid: 34e32f9060f2d0447ac1cdccffb54048,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -211,31 +236,6 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 200.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224679313558791564, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 114.157684
-      objectReference: {fileID: 0}
-    - target: {fileID: 224679313558791564, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 434.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224049584408870272, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 114.157684
-      objectReference: {fileID: 0}
-    - target: {fileID: 224049584408870272, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 261
-      objectReference: {fileID: 0}
-    - target: {fileID: 114080599377299528, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: teleportTester
-      value: 
-      objectReference: {fileID: 2000343158}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34e32f9060f2d0447ac1cdccffb54048, type: 2}
   m_IsPrefabParent: 0

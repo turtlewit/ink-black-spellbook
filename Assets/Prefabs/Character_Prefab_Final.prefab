@@ -1120,7 +1120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023340295112144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1}
+  m_LocalPosition: {x: 0, y: 0.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4085332308950698}
@@ -1584,7 +1584,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.75
+  orthographic size: 4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1857,10 +1857,12 @@ MonoBehaviour:
   Max_Speed: 10
   jump: 12
   High_Jump: 12
+  midair_lerp_sensitivity: 1
   pa: {fileID: 95447766638654408}
   small: {fileID: 61509536981301054}
   large: {fileID: 61567650907041072}
   c: {fileID: 20184359879417356}
+  camera_lerp_sensitivity: 5
 --- !u!114 &114788063082584920
 MonoBehaviour:
   m_ObjectHideFlags: 1

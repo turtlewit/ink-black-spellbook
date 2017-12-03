@@ -17,6 +17,7 @@ public class CharacterController : MonoBehaviour
     //jump
     public float jump = 8f;
 	public float High_Jump = 12f;
+	public float midair_lerp_sensitivity;
 
     bool grounded = false;
 
@@ -36,6 +37,7 @@ public class CharacterController : MonoBehaviour
 	//camera
 	public Camera c;
 	private Vector3 init_cam_pos;
+	public float camera_lerp_sensitivity;
 
     // Use this for initialization
     void Start()
@@ -77,7 +79,11 @@ public class CharacterController : MonoBehaviour
 				small.enabled = true;
 				large.enabled = false;
 			}
-			c.transform.localPosition = Vector3.Lerp (c.transform.localPosition, new Vector3 (c.transform.localPosition.x, -1.5f, c.transform.localPosition.z), (float) (5 * Time.deltaTime) );
+			c.transform.localPosition = Vector3.Lerp (
+				c.transform.localPosition, 
+				new Vector3 (c.transform.localPosition.x, -1.5f, c.transform.localPosition.z), 
+				camera_lerp_sensitivity * Time.deltaTime
+			);
 		} else {
 			if (!large.enabled) {
 				large.enabled = true;
@@ -137,13 +143,13 @@ public class CharacterController : MonoBehaviour
 		}
 
 
-
-
-        //move
-        MoveVelocity = 0;
 		crouching = false;
 
-		if (Input.GetKey (KeyCode.S) && grounded) {
+        //move
+
+		MoveVelocity = 0;
+		
+		if (Input.GetKey (KeyCode.S)) {
 			SetAnimator ("is_crouching", true);
 			SetAnimator ("is_running", false);
 			crouching = true;
@@ -155,12 +161,19 @@ public class CharacterController : MonoBehaviour
 			MoveVelocity = Max_Speed;
 			SetAnimator ("is_running", true); //Trigger running animation.
 			SetAnimator ("is_crouching", false);
-		} else  {
+		} else {
 			SetAnimator ("is_crouching", false);
 			SetAnimator ("is_running", false);
 		}
-            GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
-        
+		if (grounded) {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (MoveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
+		} else {
+			GetComponent<Rigidbody2D> ().velocity = Vector2.Lerp (
+				GetComponent<Rigidbody2D> ().velocity, 
+				new Vector2 (MoveVelocity, GetComponent<Rigidbody2D> ().velocity.y), 
+				midair_lerp_sensitivity * Time.deltaTime
+			);
+		}
 
         //attack
         if (Input.GetKeyDown(KeyCode.Z))
