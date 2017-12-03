@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6a2ea0ce3bd5fb341a8f7bd467f488d4
-timeCreated: 1512261691
+guid: bc63647d7843c9b4d97bf5c130d71219
+timeCreated: 1512280996
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -52,10 +52,6 @@ ModelImporter:
     100088: torso
     100090: upperarm.l
     100092: upperarm.r
-    100094: Camera
-    100096: Lamp
-    100098: Lamp.001
-    100100: Lamp.002
     400000: Armature
     400002: arms
     400004: base
@@ -103,11 +99,6 @@ ModelImporter:
     400088: torso
     400090: upperarm.l
     400092: upperarm.r
-    400094: Camera
-    400096: Lamp
-    400098: Lamp.001
-    400100: Lamp.002
-    2000000: Camera
     4300000: head
     4300002: torso
     4300004: arms
@@ -115,15 +106,14 @@ ModelImporter:
     4300008: hat
     4300010: legs
     4300012: feet
-    7400000: Armature|Anim-Idle
-    7400002: Anim-Run
-    7400004: Armature|Anim-Run
-    7400006: Armature|Crouch
-    7400008: Armature|Anim--Jump
+    7400000: Anim-Run
+    7400002: Anim-Run.001
+    7400004: Armature|Anim--Jump
+    7400006: Armature|Anim-Idle
+    7400008: Armature|Anim-Run
+    7400010: Armature|ArmatureAction
+    7400012: Armature|Crouch
     9500000: //RootNode
-    10800000: Lamp
-    10800002: Lamp.001
-    10800004: Lamp.002
     13700000: arms
     13700002: feet
     13700004: hat
@@ -155,7 +145,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -163,6 +153,34 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Anim--Jump
+      takeName: Armature|Anim--Jump
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Armature|Anim-Idle
       takeName: Armature|Anim-Idle
@@ -174,7 +192,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -195,14 +213,14 @@ ModelImporter:
       name: Armature|Anim-Run
       takeName: Armature|Anim-Run
       firstFrame: 0
-      lastFrame: 34
+      lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -220,8 +238,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Anim--Jump
-      takeName: Armature|Anim--Jump
+      name: Armature|Crouch
+      takeName: Armature|Crouch
       firstFrame: 0
       lastFrame: 120
       wrapMode: 0
@@ -230,7 +248,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -289,7 +307,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
