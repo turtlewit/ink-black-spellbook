@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/main-menu.unity
     guid: 663545ec466b32e4bb5db033c259b712
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test.unity
     guid: 04b9a1da840a4f9428fed20b06d8765c
+  - enabled: 1
+    path: Assets/Scenes/final_prefab_test_scene.unity
+    guid: 37641ab15ee13714b9d46e25626a09e9
