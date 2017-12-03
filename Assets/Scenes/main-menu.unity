@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546ce3c5217ee554ba55c4a1d1e792e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 792289324}
+  aud: {fileID: 0}
 --- !u!82 &792289324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8c87c0853c777459f9a9d1d0349993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: test
+  scene: final_prefab_test_scene
 --- !u!114 &1136427668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546ce3c5217ee554ba55c4a1d1e792e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 1136427670}
+  aud: {fileID: 0}
 --- !u!82 &1136427670
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1382,8 +1382,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673991185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 538.5, y: 303, z: 0}
-  m_LocalScale: {x: 0.5609375, y: 0.5609375, z: 0.5609375}
+  m_LocalPosition: {x: 356.5, y: 200.5, z: 0}
+  m_LocalScale: {x: 0.3712963, y: 0.3712963, z: 0.3712963}
   m_Children:
   - {fileID: 1898617570}
   - {fileID: 768285795}
@@ -1678,7 +1678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8c87c0853c777459f9a9d1d0349993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: test
+  scene: final_prefab_test_scene
 --- !u!114 &2043834601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546ce3c5217ee554ba55c4a1d1e792e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 2043834603}
+  aud: {fileID: 0}
 --- !u!114 &2043834602
 MonoBehaviour:
   m_ObjectHideFlags: 0
