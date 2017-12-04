@@ -1628,7 +1628,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1657,7 +1657,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.43027014}
+  m_Size: {x: 0.62, y: 0.43027014}
   m_EdgeRadius: 0
 --- !u!61 &61567650907041072
 BoxCollider2D:
@@ -1682,7 +1682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.92}
+  m_Size: {x: 0.62, y: 0.92}
   m_EdgeRadius: 0
 --- !u!70 &70473604191539296
 CapsuleCollider2D:
@@ -1697,7 +1697,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.51}
-  m_Size: {x: 0.44, y: 0.31}
+  m_Size: {x: 0.62, y: 0.31}
   m_Direction: 1
 --- !u!70 &70728833123938012
 CapsuleCollider2D:
@@ -1712,7 +1712,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.42}
-  m_Size: {x: 1.08, y: 0.29}
+  m_Size: {x: 0.62, y: 0.29}
   m_Direction: 1
 --- !u!81 &81235104280864336
 AudioListener:
