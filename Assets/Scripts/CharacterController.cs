@@ -181,7 +181,7 @@ public class CharacterController : MonoBehaviour
 		}
 
         //attack
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.J))
         {
 			pa.SetTrigger ("Attack");
             Collider2D[] hitobjects = Physics2D.OverlapCircleAll(transform.position, 1.0f);
