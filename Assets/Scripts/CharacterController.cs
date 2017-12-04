@@ -96,15 +96,19 @@ public class CharacterController : MonoBehaviour
 	}
 
     //Check to see if grounded or not
-    void OnTriggerEnter2D()
+	void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("touching ground");
-        grounded = true;
+		if (col.tag != "Contact Enemy") {
+			Debug.Log ("touching ground");
+			grounded = true;
+		}
     }
-    void OnTriggerExit2D()
+	void OnTriggerExit2D(Collider2D col)
     {
-        Debug.Log("not touching ground");
-        grounded = false;
+		if (col.tag != "Contact Enemy") {
+			Debug.Log ("not touching ground");
+			grounded = false;
+		}
     }
 
 
