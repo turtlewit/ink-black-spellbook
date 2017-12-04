@@ -28,6 +28,7 @@ public class CharacterController : MonoBehaviour
 
 	//animator
 	public Animator pa;
+	public GameObject broom;
 
 	//crouching
 	private bool crouching = false;
@@ -182,7 +183,7 @@ public class CharacterController : MonoBehaviour
         //attack
         if (Input.GetKeyDown(KeyCode.Z))
         {
-
+			pa.SetTrigger ("Attack");
             Collider2D[] hitobjects = Physics2D.OverlapCircleAll(transform.position, 1.0f);
             if (hitobjects.Length >= 5)
             {

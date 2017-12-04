@@ -56,6 +56,7 @@ ModelImporter:
     100096: Lamp
     100098: Lamp.001
     100100: Lamp.002
+    100102: broom
     400000: Armature
     400002: arms
     400004: base
@@ -107,6 +108,7 @@ ModelImporter:
     400096: Lamp
     400098: Lamp.001
     400100: Lamp.002
+    400102: broom
     2000000: Camera
     4300000: head
     4300002: torso
@@ -115,11 +117,13 @@ ModelImporter:
     4300008: hat
     4300010: legs
     4300012: feet
+    4300014: broom
     7400000: Armature|Anim-Idle
     7400002: Anim-Run
     7400004: Armature|Anim-Run
     7400006: Armature|Crouch
     7400008: Armature|Anim--Jump
+    7400010: Armature|Anim-Attack-Broom
     9500000: //RootNode
     10800000: Lamp
     10800002: Lamp.001
@@ -131,7 +135,13 @@ ModelImporter:
     13700008: legs
     13700010: shoulders
     13700012: torso
+    13700014: broom
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: fb748a93de604d742aa469f747ee3d99, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -224,6 +234,34 @@ ModelImporter:
       takeName: Armature|Anim--Jump
       firstFrame: 0
       lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Anim-Attack-Broom
+      takeName: Armature|Anim-Attack-Broom
+      firstFrame: 0
+      lastFrame: 23
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

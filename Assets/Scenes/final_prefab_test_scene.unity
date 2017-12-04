@@ -219,7 +219,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 115a28141a9794b56b2f4fc7d65c2956, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1415880667
+--- !u!1001 &861675133
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -258,11 +258,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114080599377299528, guid: 34e32f9060f2d0447ac1cdccffb54048,
-        type: 2}
-      propertyPath: teleportTester
-      value: 
-      objectReference: {fileID: 2000343158}
     - target: {fileID: 224049584408870272, guid: 34e32f9060f2d0447ac1cdccffb54048,
         type: 2}
       propertyPath: m_LocalPosition.x
